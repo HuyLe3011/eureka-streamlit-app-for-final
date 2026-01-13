@@ -457,7 +457,7 @@ if start_date and end_date and start_date <= end_date and (end_date - start_date
 
         # Tùy chỉnh hiển thị
         fig.update_traces(
-            hovertemplate='<b>%{customdata[0]}</b><br>Tỷ trọng: %{value:.2%}<extra></extra>',
+            hovertemplate='<b>%{customdata[0]}</b><br>Weight: %{value:.2%}<extra></extra>',
             texttemplate='<b>%{label}<br>%{value:.2%}</b>',  # Thêm thẻ <b> để in đậm
             textposition="middle center",  # Đặt vị trí text ở giữa
             textfont=dict(size=10, family="Arial Black")  # Tăng độ đậm của font
@@ -476,5 +476,6 @@ if start_date and end_date and start_date <= end_date and (end_date - start_date
         st.plotly_chart(fig)
 else:
     st.warning("Please select a valid time period before proceeding with the calculation.")
+
 
 
