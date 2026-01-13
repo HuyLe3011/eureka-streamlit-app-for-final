@@ -440,7 +440,7 @@ if prices is not None:
 
         # Tùy chỉnh hiển thị
         fig.update_traces(
-            hovertemplate='<b>%{customdata[0]}</b><br>Tỷ trọng: %{value:.2%}<extra></extra>',
+            hovertemplate='<b>%{customdata[0]}</b><br>Weight: %{value:.2%}<extra></extra>',
             texttemplate='<b>%{label}<br>%{value:.2%}</b>',  # Thêm thẻ <b> để in đậm
             textposition="middle center",  # Đặt vị trí text ở giữa
             textfont=dict(size=10, family="Arial Black")  # Tăng độ đậm của font
