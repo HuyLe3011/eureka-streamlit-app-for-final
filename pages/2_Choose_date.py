@@ -420,8 +420,8 @@ if start_date and end_date and start_date <= end_date and (end_date - start_date
         st.title('Asset allocation chart of the portfolio')
 
         square_plot_test = pd.DataFrame({
-            'Cổ phiếu': results_LSTM.sort_values('Weight', ascending=False).Asset,
-            'Tỷ trọng': results_LSTM.sort_values('Weight', ascending=False).Weight
+            'Stock': results_LSTM.sort_values('Weight', ascending=False).Asset,
+            'Weight': results_LSTM.sort_values('Weight', ascending=False).Weight
         })
 
         # Sắp xếp DataFrame theo tỷ trọng
@@ -476,4 +476,5 @@ if start_date and end_date and start_date <= end_date and (end_date - start_date
         st.plotly_chart(fig)
 else:
     st.warning("Please select a valid time period before proceeding with the calculation.")
+
 
